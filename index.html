@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="light"> <head>
+<html lang="en" class="light">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-en="Smart PDF-JPG Toolkit" data-hi="स्मार्ट PDF-JPG टूलकिट">Smart PDF-JPG Toolkit</title>
@@ -14,63 +15,55 @@
             font-family: 'Inter', sans-serif;
         }
         /* Basic dark mode styles */
-        .dark body {
-            background-color: #1f2937; /* gray-800 */
-            color: #f3f4f6; /* gray-100 */
-        }
-        .dark .bg-white { background-color: #374151; /* gray-700 */ }
-        .dark .bg-gray-100 { background-color: #1f2937; /* gray-800 */ }
-        .dark .bg-gray-200 { background-color: #111827; /* gray-900 */ } /* Footer dark */
-        .dark .text-gray-900 { color: #f9fafb; /* gray-50 */ }
-        .dark .text-gray-700 { color: #d1d5db; /* gray-300 */ }
-        .dark .text-gray-600 { color: #9ca3af; /* gray-400 */ }
-        .dark .text-gray-500 { color: #9ca3af; /* gray-400 */ }
-        .dark .border-gray-200 { border-color: #4b5563; /* gray-600 */ }
-        .dark .border-gray-300 { border-color: #4b5563; /* gray-600 */ }
-        .dark .hover\:bg-gray-50:hover { background-color: #4b5563; /* gray-600 */}
-        .dark .ring-gray-300 { ring-color: #4b5563; /* gray-600 */}
-        .dark .hover\:text-blue-600:hover { color: #60a5fa; /* blue-400 */ }
-        .dark .text-blue-600 { color: #60a5fa; /* blue-400 */ }
-        .dark .text-green-600 { color: #34d399; /* green-400 */ }
-        .dark .text-purple-600 { color: #a78bfa; /* purple-400 */ }
+        .dark body { background-color: #1f2937; color: #f3f4f6; }
+        .dark .bg-white { background-color: #374151; }
+        .dark .bg-gray-100 { background-color: #1f2937; }
+        .dark .bg-gray-200 { background-color: #111827; } /* Footer dark */
+        .dark .text-gray-900 { color: #f9fafb; }
+        .dark .text-gray-700 { color: #d1d5db; }
+        .dark .text-gray-600 { color: #9ca3af; }
+        .dark .text-gray-500 { color: #9ca3af; }
+        .dark .border-gray-200 { border-color: #4b5563; }
+        .dark .border-gray-300 { border-color: #4b5563; }
+        .dark .hover\:bg-gray-50:hover { background-color: #4b5563; }
+        .dark .ring-gray-300 { ring-color: #4b5563; }
+        .dark .hover\:text-blue-600:hover { color: #60a5fa; }
+        .dark .text-blue-600 { color: #60a5fa; }
+        .dark .text-green-600 { color: #34d399; }
+        .dark .text-purple-600 { color: #a78bfa; }
+        .dark .text-red-500 { color: #f87171; }
+        .dark .text-green-500 { color: #34d399; }
+        .dark .text-blue-500 { color: #60a5fa; }
+        .dark .text-yellow-500 { color: #facc15; }
+        .dark .text-red-600 { color: #f87171; }
+        .dark .text-green-600 { color: #34d399; }
+        .dark .text-purple-500 { color: #c084fc; }
+        .dark .text-gray-600 { color: #9ca3af; }
+        .dark .text-gray-500 { color: #a1a1aa; }
+        .dark .text-orange-500 { color: #fb923c; }
+        .dark .text-teal-500 { color: #2dd4bf; }
+        .dark .text-indigo-500 { color: #818cf8; }
+        .dark .text-pink-500 { color: #f472b6; }
+        .dark .text-cyan-500 { color: #22d3ee; }
+        .dark .hover\:border-blue-400:hover { border-color: #60a5fa; }
+        .dark .text-blue-400 { color: #60a5fa; }
+        .dark .hover\:text-red-400:hover { color: #f87171; }
+        .dark .bg-yellow-900 { background-color: #78350f; }
+        .dark .border-yellow-700 { border-color: #b45309; }
+        .dark .text-yellow-200 { color: #fef3c7; }
+        .dark .hover\:text-yellow-100:hover { color: #fef9c3; }
 
         /* Tooltip styles (basic) */
         [data-tooltip]:hover::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-5px);
-            background-color: #374151; /* gray-700 */
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-            z-index: 10;
-            pointer-events: none; /* Prevent tooltip from blocking hover on element */
+            content: attr(data-tooltip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-5px); background-color: #374151; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; white-space: nowrap; z-index: 10; pointer-events: none;
         }
-         .dark [data-tooltip]:hover::after {
-             background-color: #f3f4f6; /* gray-100 */
-             color: #1f2937; /* gray-800 */
-         }
+        .dark [data-tooltip]:hover::after { background-color: #f3f4f6; color: #1f2937; }
 
         /* Drag and Drop Area */
-        .drag-drop-area {
-            border: 3px dashed #cbd5e1; /* gray-300 */
-            transition: border-color 0.3s ease;
-        }
-        .drag-drop-area.dragging {
-            border-color: #3b82f6; /* blue-500 */
-            background-color: #eff6ff; /* blue-50 */
-        }
-         .dark .drag-drop-area {
-             border-color: #4b5563; /* gray-600 */
-         }
-         .dark .drag-drop-area.dragging {
-             border-color: #60a5fa; /* blue-400 */
-             background-color: #1e3a8a; /* blue-900 */
-         }
+        .drag-drop-area { border: 3px dashed #cbd5e1; transition: border-color 0.3s ease, background-color 0.3s ease; }
+        .drag-drop-area.dragging { border-color: #3b82f6; background-color: #eff6ff; }
+        .dark .drag-drop-area { border-color: #4b5563; }
+        .dark .drag-drop-area.dragging { border-color: #60a5fa; background-color: #1e3a8a; }
 
         /* Hide elements based on language */
         .lang-en .hi-text { display: none; }
@@ -81,53 +74,47 @@
         .logged-in .logged-out-item { display: none; }
 
         /* Style for disabled personalization section */
-        .personalization-disabled {
-            opacity: 0.6;
-            pointer-events: none;
+        .personalization-disabled { opacity: 0.6; pointer-events: none; }
+
+        /* Tool Card Styling */
+        .tool-card { cursor: pointer; } /* Make cards clickable */
+        .tool-card.disabled { cursor: not-allowed; opacity: 0.5; } /* Style for disabled state */
+
+        /* Processing Overlay */
+        #processing-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); z-index: 100;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.5rem; text-align: center;
+            flex-direction: column; gap: 1rem;
         }
+         #processing-overlay i { font-size: 3rem; }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .tool-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-            }
-            .header-actions {
-                 gap: 0.5rem; /* Reduce gap on smaller screens */
-            }
+            .tool-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-actions { gap: 0.5rem; }
         }
-        @media (max-width: 640px) { /* Adjusted breakpoint for header nav stacking */
-             .header-nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .header-actions {
-                margin-top: 1rem;
-                width: 100%;
-                justify-content: space-between;
-            }
+        @media (max-width: 640px) {
+             .header-nav { flex-direction: column; align-items: flex-start; }
+            .header-actions { margin-top: 1rem; width: 100%; justify-content: space-between; }
         }
          @media (max-width: 480px) {
-            .tool-grid {
-                grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
-            }
-             .personalization-grid {
-                 grid-template-columns: repeat(1, 1fr); /* Stack personalization items */
-             }
+            .tool-grid { grid-template-columns: repeat(1, 1fr); }
+             .personalization-grid { grid-template-columns: repeat(1, 1fr); }
         }
-
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 lang-en logged-out">
 
     <header class="bg-white shadow-sm sticky top-0 z-50 dark:bg-gray-800 dark:border-b dark:border-gray-700">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center header-nav">
-            <a href="#" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <a href="/" class="text-2xl font-bold text-blue-600 dark:text-blue-400">
                 <span class="en-text">SmartKit</span>
                 <span class="hi-text">स्मार्टकिट</span>
             </a>
 
             <div class="flex items-center space-x-2 md:space-x-4 header-actions">
-
                 <button id="login-btn" class="logged-out-item text-sm font-medium px-3 py-1.5 border border-gray-300 rounded-md hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700">
                     <span class="en-text">Login</span>
                     <span class="hi-text">लॉग इन करें</span>
@@ -137,7 +124,7 @@
                     <span class="hi-text">रजिस्टर करें</span>
                 </button>
 
-                <a href="#" id="dashboard-link" class="logged-in-item text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400" data-tooltip data-en-tooltip="Go to your Dashboard" data-hi-tooltip="अपने डैशबोर्ड पर जाएं">
+                <a href="/dashboard" id="dashboard-link" class="logged-in-item text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400" data-tooltip data-en-tooltip="Go to your Dashboard" data-hi-tooltip="अपने डैशबोर्ड पर जाएं">
                     <i class="fas fa-tachometer-alt text-xl"></i>
                      <span class="sr-only en-text">Dashboard</span>
                      <span class="sr-only hi-text">डैशबोर्ड</span>
@@ -153,7 +140,8 @@
                 </button>
 
                 <button id="theme-toggle" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400" title="Toggle Theme">
-                    <i class="fas fa-moon text-xl"></i> <i class="fas fa-sun text-xl hidden"></i> </button>
+                    <i class="fas fa-moon text-xl"></i> <i class="fas fa-sun text-xl hidden"></i>
+                </button>
                 <button id="lang-toggle" class="text-sm font-medium px-3 py-1 border border-gray-300 rounded-md hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700">
                     <span class="en-text">हिन्दी</span>
                     <span class="hi-text">English</span>
@@ -175,7 +163,7 @@
             </p>
 
             <div id="drag-drop-area" class="drag-drop-area bg-white dark:bg-gray-700 rounded-lg p-8 md:p-12 max-w-3xl mx-auto cursor-pointer hover:border-blue-500 dark:hover:border-blue-400">
-                <input type="file" id="file-input" multiple class="hidden" />
+                <input type="file" id="file-input" multiple class="hidden" accept=".pdf,.jpg,.jpeg,.png,.bmp" />
                 <div class="flex flex-col items-center justify-center space-y-4">
                      <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 dark:text-blue-400"></i>
                     <p class="font-semibold">
@@ -186,7 +174,7 @@
                         <span class="en-text">or</span>
                         <span class="hi-text">या</span>
                     </p>
-                    <button onclick="document.getElementById('file-input').click();" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-5 rounded-lg transition duration-200">
+                    <button type="button" onclick="document.getElementById('file-input').click();" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-5 rounded-lg transition duration-200">
                         <span class="en-text">Choose Files</span>
                         <span class="hi-text">फ़ाइलें चुनें</span>
                     </button>
@@ -196,10 +184,18 @@
                     </p>
                 </div>
             </div>
+             <div id="file-list" class="mt-4 max-w-3xl mx-auto text-left"></div>
+             <div id="file-actions" class="mt-4 max-w-3xl mx-auto text-center hidden">
+                 <button id="clear-files-btn" type="button" class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 text-sm">
+                     <i class="fas fa-times mr-1"></i>
+                     <span class="en-text">Clear Selection</span>
+                     <span class="hi-text">चयन हटाएं</span>
+                 </button>
+             </div>
             <p class="text-xs text-gray-500 dark:text-gray-400 mt-4">
                 <i class="fas fa-lock text-green-600 dark:text-green-400 mr-1"></i>
-                <span class="en-text">Your files are secure and automatically deleted after processing.</span>
-                <span class="hi-text">आपकी फ़ाइलें सुरक्षित हैं और प्रोसेसिंग के बाद स्वचालित रूप से हटा दी जाती हैं।</span>
+                <span class="en-text">Your files are secure and processed on the server.</span>
+                <span class="hi-text">आपकी फ़ाइलें सुरक्षित हैं और सर्वर पर संसाधित की जाती हैं।</span>
             </p>
         </section>
 
@@ -209,106 +205,52 @@
                 <span class="hi-text">PDF टूल्स</span>
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 tool-grid">
-                <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Convert JPG images to a single PDF file" data-hi-tooltip="JPG छवियों को एक PDF फ़ाइल में बदलें">
+                <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tool="jpg-to-pdf" data-tooltip data-en-tooltip="Convert JPG images to a single PDF file" data-hi-tooltip="JPG छवियों को एक PDF फ़ाइल में बदलें" data-accept=".jpg,.jpeg,.png,.bmp">
                     <i class="fas fa-file-pdf text-3xl text-red-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">JPG to PDF</span>
-                        <span class="hi-text">JPG को PDF में बदलें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Combine JPGs into PDF</span>
-                        <span class="hi-text">JPGs को PDF में मिलाएं</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Extract images from a PDF file" data-hi-tooltip="PDF फ़ाइल से छवियां निकालें">
-                    <i class="fas fa-file-image text-3xl text-green-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">PDF to JPG</span>
-                        <span class="hi-text">PDF को JPG में बदलें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Convert PDF pages to JPG</span>
-                        <span class="hi-text">PDF पेजों को JPG में बदलें</span>
-                    </p>
-                </a>
-                <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Combine multiple PDF files into one" data-hi-tooltip="कई PDF फ़ाइलों को एक में मिलाएं">
-                    <i class="fas fa-compress-alt text-3xl text-blue-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Merge PDFs</span>
-                        <span class="hi-text">PDFs को जोड़ें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Join multiple PDFs</span>
-                        <span class="hi-text">कई PDFs को जोड़ें</span>
-                    </p>
-                </a>
-                <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Split a PDF into multiple files or extract pages" data-hi-tooltip="एक PDF को कई फ़ाइलों में विभाजित करें या पेज निकालें">
-                    <i class="fas fa-cut text-3xl text-yellow-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Split PDF</span>
-                        <span class="hi-text">PDF पेजों को अलग करें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Extract pages from PDF</span>
-                        <span class="hi-text">PDF से पेज निकालें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Remove specific pages from a PDF" data-hi-tooltip="PDF से विशिष्ट पेज हटाएं">
-                    <i class="fas fa-trash-alt text-3xl text-red-600 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Delete PDF Pages</span>
-                        <span class="hi-text">PDF से पेज हटाएं</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Remove unwanted pages</span>
-                        <span class="hi-text">अवांछित पेज हटाएं</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Insert blank or other PDF pages into a PDF" data-hi-tooltip="PDF में खाली या अन्य PDF पेज डालें">
-                    <i class="fas fa-plus-square text-3xl text-green-600 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Add Pages to PDF</span>
-                        <span class="hi-text">PDF में नए पेज जोड़ें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Insert pages into PDF</span>
-                        <span class="hi-text">PDF में पेज डालें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Change the order of pages in a PDF" data-hi-tooltip="PDF में पेजों का क्रम बदलें">
-                    <i class="fas fa-sort text-3xl text-purple-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Rearrange PDF Pages</span>
-                        <span class="hi-text">PDF पेजों को क्रम में करें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Reorder PDF pages</span>
-                        <span class="hi-text">PDF पेजों को पुनः क्रमबद्ध करें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Protect your PDF file with a password" data-hi-tooltip="अपनी PDF फ़ाइल को पासवर्ड से सुरक्षित करें">
-                    <i class="fas fa-lock text-3xl text-gray-600 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Add Password to PDF</span>
-                        <span class="hi-text">PDF को पासवर्ड से सुरक्षित करें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Secure your PDF</span>
-                        <span class="hi-text">अपनी PDF सुरक्षित करें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Remove password protection from a PDF" data-hi-tooltip="PDF से पासवर्ड सुरक्षा हटाएं">
-                    <i class="fas fa-unlock-alt text-3xl text-gray-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Remove PDF Password</span>
-                        <span class="hi-text">PDF पासवर्ड हटाएं</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Unlock your PDF</span>
-                        <span class="hi-text">अपनी PDF अनलॉक करें</span>
-                    </p>
-                </a>
+                    <h3 class="font-medium mb-1"><span class="en-text">JPG to PDF</span><span class="hi-text">JPG को PDF में बदलें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Combine images into PDF</span><span class="hi-text">छवियों को PDF में मिलाएं</span></p>
                 </div>
+                <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tool="pdf-to-jpg" data-tooltip data-en-tooltip="Extract images from a PDF file" data-hi-tooltip="PDF फ़ाइल से छवियां निकालें" data-accept=".pdf">
+                    <i class="fas fa-file-image text-3xl text-green-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">PDF to JPG</span><span class="hi-text">PDF को JPG में बदलें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Convert PDF pages to JPG</span><span class="hi-text">PDF पेजों को JPG में बदलें</span></p>
+                </div>
+                <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tool="merge-pdf" data-tooltip data-en-tooltip="Combine multiple PDF files into one" data-hi-tooltip="कई PDF फ़ाइलों को एक में मिलाएं" data-accept=".pdf">
+                    <i class="fas fa-compress-alt text-3xl text-blue-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Merge PDFs</span><span class="hi-text">PDFs को जोड़ें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Join multiple PDFs</span><span class="hi-text">कई PDFs को जोड़ें</span></p>
+                </div>
+                <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tool="split-pdf" data-tooltip data-en-tooltip="Split a PDF into multiple files or extract pages" data-hi-tooltip="एक PDF को कई फ़ाइलों में विभाजित करें या पेज निकालें" data-accept=".pdf">
+                    <i class="fas fa-cut text-3xl text-yellow-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Split PDF</span><span class="hi-text">PDF पेजों को अलग करें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Extract pages from PDF</span><span class="hi-text">PDF से पेज निकालें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="delete-pdf-pages" data-tooltip data-en-tooltip="Remove specific pages from a PDF (Coming Soon)" data-hi-tooltip="PDF से विशिष्ट पेज हटाएं (जल्द आ रहा है)" data-accept=".pdf">
+                    <i class="fas fa-trash-alt text-3xl text-red-600 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Delete PDF Pages</span><span class="hi-text">PDF से पेज हटाएं</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Remove unwanted pages</span><span class="hi-text">अवांछित पेज हटाएं</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="add-pdf-pages" data-tooltip data-en-tooltip="Insert blank or other PDF pages into a PDF (Coming Soon)" data-hi-tooltip="PDF में खाली या अन्य PDF पेज डालें (जल्द आ रहा है)" data-accept=".pdf">
+                    <i class="fas fa-plus-square text-3xl text-green-600 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Add Pages to PDF</span><span class="hi-text">PDF में नए पेज जोड़ें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Insert pages into PDF</span><span class="hi-text">PDF में पेज डालें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="rearrange-pdf-pages" data-tooltip data-en-tooltip="Change the order of pages in a PDF (Coming Soon)" data-hi-tooltip="PDF में पेजों का क्रम बदलें (जल्द आ रहा है)" data-accept=".pdf">
+                    <i class="fas fa-sort text-3xl text-purple-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Rearrange PDF Pages</span><span class="hi-text">PDF पेजों को क्रम में करें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Reorder PDF pages</span><span class="hi-text">PDF पेजों को पुनः क्रमबद्ध करें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="add-pdf-password" data-tooltip data-en-tooltip="Protect your PDF file with a password (Coming Soon)" data-hi-tooltip="अपनी PDF फ़ाइल को पासवर्ड से सुरक्षित करें (जल्द आ रहा है)" data-accept=".pdf">
+                    <i class="fas fa-lock text-3xl text-gray-600 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Add Password to PDF</span><span class="hi-text">PDF को पासवर्ड से सुरक्षित करें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Secure your PDF</span><span class="hi-text">अपनी PDF सुरक्षित करें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="remove-pdf-password" data-tooltip data-en-tooltip="Remove password protection from a PDF (Coming Soon)" data-hi-tooltip="PDF से पासवर्ड सुरक्षा हटाएं (जल्द आ रहा है)" data-accept=".pdf">
+                    <i class="fas fa-unlock-alt text-3xl text-gray-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Remove PDF Password</span><span class="hi-text">PDF पासवर्ड हटाएं</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Unlock your PDF</span><span class="hi-text">अपनी PDF अनलॉक करें</span></p>
+                </div>
+            </div>
         </section>
 
         <section class="mb-12 md:mb-16">
@@ -317,62 +259,32 @@
                 <span class="hi-text">JPG टूल्स</span>
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 tool-grid">
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Decrease the file size of JPG images" data-hi-tooltip="JPG छवियों का फ़ाइल आकार कम करें">
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="reduce-jpg-size" data-tooltip data-en-tooltip="Decrease the file size of JPG images (Coming Soon)" data-hi-tooltip="JPG छवियों का फ़ाइल आकार कम करें (जल्द आ रहा है)" data-accept=".jpg,.jpeg">
                     <i class="fas fa-compress-arrows-alt text-3xl text-orange-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Reduce JPG Size</span>
-                        <span class="hi-text">छवि का साइज कम करें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Make JPG files smaller</span>
-                        <span class="hi-text">JPG फ़ाइलें छोटी करें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Increase the dimensions of JPG images" data-hi-tooltip="JPG छवियों का आयाम बढ़ाएँ">
-                    <i class="fas fa-expand-arrows-alt text-3xl text-teal-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Increase JPG Size</span>
-                        <span class="hi-text">साइज बढ़ाएं</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Enlarge JPG images</span>
-                        <span class="hi-text">JPG छवियां बड़ी करें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Compress images to reduce file size significantly" data-hi-tooltip="फ़ाइल आकार को काफी कम करने के लिए छवियों को कंप्रेस करें">
-                    <i class="fas fa-file-archive text-3xl text-indigo-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Compress Image</span>
-                        <span class="hi-text">इमेज को compress करें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Optimize image size</span>
-                        <span class="hi-text">छवि का आकार अनुकूलित करें</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Convert various image formats (PNG, BMP, GIF) to JPG" data-hi-tooltip="विभिन्न छवि प्रारूपों (PNG, BMP, GIF) को JPG में बदलें">
-                    <i class="fas fa-exchange-alt text-3xl text-pink-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Convert to JPG</span>
-                        <span class="hi-text">JPG में बदलें</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">PNG, BMP, etc. to JPG</span>
-                        <span class="hi-text">PNG, BMP, आदि को JPG में</span>
-                    </p>
-                </a>
-                 <a href="#" class="relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center" data-tooltip data-en-tooltip="Process multiple images at once" data-hi-tooltip="एक साथ कई छवियों को प्रोसेस करें">
-                    <i class="fas fa-layer-group text-3xl text-cyan-500 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Batch Image Processing</span>
-                        <span class="hi-text">बैच इमेज प्रोसेसिंग</span>
-                    </h3>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                        <span class="en-text">Edit multiple images</span>
-                        <span class="hi-text">कई छवियां संपादित करें</span>
-                    </p>
-                </a>
+                    <h3 class="font-medium mb-1"><span class="en-text">Reduce JPG Size</span><span class="hi-text">छवि का साइज कम करें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Make JPG files smaller</span><span class="hi-text">JPG फ़ाइलें छोटी करें</span></p>
                 </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="increase-jpg-size" data-tooltip data-en-tooltip="Increase the dimensions of JPG images (Coming Soon)" data-hi-tooltip="JPG छवियों का आयाम बढ़ाएँ (जल्द आ रहा है)" data-accept=".jpg,.jpeg">
+                    <i class="fas fa-expand-arrows-alt text-3xl text-teal-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Increase JPG Size</span><span class="hi-text">साइज बढ़ाएं</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Enlarge JPG images</span><span class="hi-text">JPG छवियां बड़ी करें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="compress-image" data-tooltip data-en-tooltip="Compress images to reduce file size significantly (Coming Soon)" data-hi-tooltip="फ़ाइल आकार को काफी कम करने के लिए छवियों को कंप्रेस करें (जल्द आ रहा है)" data-accept=".jpg,.jpeg,.png">
+                    <i class="fas fa-file-archive text-3xl text-indigo-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Compress Image</span><span class="hi-text">इमेज को compress करें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Optimize image size</span><span class="hi-text">छवि का आकार अनुकूलित करें</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="convert-to-jpg" data-tooltip data-en-tooltip="Convert various image formats (PNG, BMP, GIF) to JPG (Coming Soon)" data-hi-tooltip="विभिन्न छवि प्रारूपों (PNG, BMP, GIF) को JPG में बदलें (जल्द आ रहा है)" data-accept=".png,.bmp,.gif,.tiff">
+                    <i class="fas fa-exchange-alt text-3xl text-pink-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Convert to JPG</span><span class="hi-text">JPG में बदलें</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">PNG, BMP, etc. to JPG</span><span class="hi-text">PNG, BMP, आदि को JPG में</span></p>
+                </div>
+                 <div class="tool-card relative bg-white dark:bg-gray-700 p-5 rounded-lg shadow hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center disabled" data-tool="batch-image" data-tooltip data-en-tooltip="Process multiple images at once (Coming Soon)" data-hi-tooltip="एक साथ कई छवियों को प्रोसेस करें (जल्द आ रहा है)" data-accept=".jpg,.jpeg,.png">
+                    <i class="fas fa-layer-group text-3xl text-cyan-500 mb-3"></i>
+                    <h3 class="font-medium mb-1"><span class="en-text">Batch Image Processing</span><span class="hi-text">बैच इमेज प्रोसेसिंग</span></h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400"><span class="en-text">Edit multiple images</span><span class="hi-text">कई छवियां संपादित करें</span></p>
+                </div>
+            </div>
         </section>
 
         <section id="personalization-section" class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 md:p-8 mb-12 md:mb-16">
@@ -383,44 +295,26 @@
             <div id="login-prompt" class="logged-out-item text-center mb-6 bg-yellow-100 dark:bg-yellow-900 border border-yellow-300 dark:border-yellow-700 text-yellow-800 dark:text-yellow-200 px-4 py-3 rounded-md">
                  <p>
                      <i class="fas fa-info-circle mr-1"></i>
-                     <span class="en-text">Please <button class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="simulateLogin()">log in</button> or <button class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="simulateRegister()">register</button> to access your dashboard, recent files, and cloud save options.</span>
-                     <span class="hi-text">कृपया अपने डैशबोर्ड, हाल की फ़ाइलों और क्लाउड सेव विकल्पों तक पहुँचने के लिए <button class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="simulateLogin()">लॉग इन करें</button> या <button class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="simulateRegister()">रजिस्टर करें</button>।</span>
+                     <span class="en-text">Please <button type="button" class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="showLoginModal()">log in</button> or <button type="button" class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="showRegisterModal()">register</button> to access your dashboard, recent files, and cloud save options.</span>
+                     <span class="hi-text">कृपया अपने डैशबोर्ड, हाल की फ़ाइलों और क्लाउड सेव विकल्पों तक पहुँचने के लिए <button type="button" class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="showLoginModal()">लॉग इन करें</button> या <button type="button" class="font-bold underline hover:text-yellow-900 dark:hover:text-yellow-100" onclick="showRegisterModal()">रजिस्टर करें</button>।</span>
                  </p>
              </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center personalization-grid">
                 <div id="recent-files-feature" class="flex flex-col items-center">
                     <i class="fas fa-history text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Recent Files</span>
-                        <span class="hi-text">हाल की फ़ाइलें</span>
-                    </h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="en-text">Access your recent conversions quickly from your dashboard.</span>
-                        <span class="hi-text">अपने डैशबोर्ड से अपनी हाल की रूपांतरणों तक शीघ्रता से पहुँचें।</span>
-                    </p>
+                    <h3 class="font-medium mb-1"><span class="en-text">Recent Files</span><span class="hi-text">हाल की फ़ाइलें</span></h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><span class="en-text">Access your recent conversions quickly from your dashboard.</span><span class="hi-text">अपने डैशबोर्ड से अपनी हाल की रूपांतरणों तक शीघ्रता से पहुँचें।</span></p>
                 </div>
                  <div id="cloud-save-feature" class="flex flex-col items-center">
                     <i class="fas fa-cloud-upload-alt text-3xl text-green-600 dark:text-green-400 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Cloud Save</span>
-                        <span class="hi-text">क्लाउड सेव</span>
-                    </h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="en-text">Save processed files directly to Google Drive or Dropbox.</span>
-                        <span class="hi-text">संसाधित फ़ाइलों को सीधे Google Drive या Dropbox में सहेजें।</span>
-                    </p>
+                    <h3 class="font-medium mb-1"><span class="en-text">Cloud Save</span><span class="hi-text">क्लाउड सेव</span></h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><span class="en-text">Save processed files directly to Google Drive or Dropbox (Requires Login).</span><span class="hi-text">संसाधित फ़ाइलों को सीधे Google Drive या Dropbox में सहेजें (लॉगिन आवश्यक)।</span></p>
                  </div>
                  <div class="flex flex-col items-center">
                     <i class="fas fa-magic text-3xl text-purple-600 dark:text-purple-400 mb-3"></i>
-                    <h3 class="font-medium mb-1">
-                        <span class="en-text">Smart Features</span>
-                        <span class="hi-text">स्मार्ट सुविधाएँ</span>
-                    </h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="en-text">Auto file naming, folder creation, and more enhancements.</span>
-                        <span class="hi-text">स्वचालित फ़ाइल नामकरण, फ़ोल्डर निर्माण, और अधिक संवर्द्धन।</span>
-                    </p>
+                    <h3 class="font-medium mb-1"><span class="en-text">Smart Features</span><span class="hi-text">स्मार्ट सुविधाएँ</span></h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><span class="en-text">Auto file naming, folder creation, and more enhancements.</span><span class="hi-text">स्वचालित फ़ाइल नामकरण, फ़ोल्डर निर्माण, और अधिक संवर्द्धन।</span></p>
                 </div>
             </div>
         </section>
@@ -434,17 +328,24 @@
                 <span class="hi-text">सर्वाधिकार सुरक्षित।</span>
             </p>
             <div class="mt-2">
-                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 mx-2">
-                    <span class="en-text">Privacy Policy</span>
-                    <span class="hi-text">गोपनीयता नीति</span>
-                </a> |
-                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 mx-2">
-                    <span class="en-text">Terms of Service</span>
-                    <span class="hi-text">सेवा की शर्तें</span>
-                </a>
+                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 mx-2"><span class="en-text">Privacy Policy</span><span class="hi-text">गोपनीयता नीति</span></a> |
+                <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 mx-2"><span class="en-text">Terms of Service</span><span class="hi-text">सेवा की शर्तें</span></a>
             </div>
         </div>
     </footer>
+
+    <div id="processing-overlay" class="hidden">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p id="processing-message">
+            <span class="en-text">Processing your files... Please wait.</span>
+            <span class="hi-text">आपकी फ़ाइलों को संसाधित किया जा रहा है... कृपया प्रतीक्षा करें।</span>
+        </p>
+    </div>
+
+    <div id="message-box" class="fixed bottom-5 right-5 z-50 hidden max-w-sm rounded-lg shadow-lg p-4" role="alert">
+        <p id="message-text"></p>
+        <button type="button" class="absolute top-2 right-2 text-lg font-semibold" onclick="hideMessage()">×</button>
+    </div>
 
     <script>
         // --- DOM Elements ---
@@ -457,6 +358,9 @@
         const titleElement = document.querySelector('title');
         const dragDropArea = document.getElementById('drag-drop-area');
         const fileInput = document.getElementById('file-input');
+        const fileListDiv = document.getElementById('file-list');
+        const fileActionsDiv = document.getElementById('file-actions');
+        const clearFilesBtn = document.getElementById('clear-files-btn');
         const loginBtn = document.getElementById('login-btn');
         const registerBtn = document.getElementById('register-btn');
         const logoutBtn = document.getElementById('logout-btn');
@@ -466,14 +370,56 @@
         const loginPrompt = document.getElementById('login-prompt');
         const dashboardLink = document.getElementById('dashboard-link');
         const welcomeMsg = document.getElementById('welcome-msg');
+        const processingOverlay = document.getElementById('processing-overlay');
+        const processingMessage = document.getElementById('processing-message');
+        const messageBox = document.getElementById('message-box');
+        const messageText = document.getElementById('message-text');
+        const toolCards = document.querySelectorAll('.tool-card');
 
         // --- State ---
         let currentLang = localStorage.getItem('language') || 'en';
         let currentTheme = localStorage.getItem('theme');
         let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true'; // Simulate login state
+        let selectedFiles = []; // Store selected files globally
+
+        // --- Utility Functions ---
+        function showMessage(message, type = 'info') {
+            messageText.textContent = message;
+            messageBox.className = `fixed bottom-5 right-5 z-50 max-w-sm rounded-lg shadow-lg p-4`; // Reset classes
+            if (type === 'error') {
+                messageBox.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700', 'dark:bg-red-900', 'dark:border-red-700', 'dark:text-red-200');
+            } else if (type === 'success') {
+                messageBox.classList.add('bg-green-100', 'border', 'border-green-400', 'text-green-700', 'dark:bg-green-900', 'dark:border-green-700', 'dark:text-green-200');
+            } else { // info
+                messageBox.classList.add('bg-blue-100', 'border', 'border-blue-400', 'text-blue-700', 'dark:bg-blue-900', 'dark:border-blue-700', 'dark:text-blue-200');
+            }
+            messageBox.classList.remove('hidden');
+            // Auto-hide after 5 seconds
+            setTimeout(hideMessage, 5000);
+        }
+
+        function hideMessage() {
+            messageBox.classList.add('hidden');
+        }
+
+        function showProcessing(message = null) {
+            if (message) {
+                processingMessage.querySelector('.en-text').textContent = message.en || 'Processing...';
+                processingMessage.querySelector('.hi-text').textContent = message.hi || 'संसाधित हो रहा है...';
+            } else {
+                 processingMessage.querySelector('.en-text').textContent = 'Processing your files... Please wait.';
+                 processingMessage.querySelector('.hi-text').textContent = 'आपकी फ़ाइलों को संसाधित किया जा रहा है... कृपया प्रतीक्षा करें।';
+            }
+            processingOverlay.classList.remove('hidden');
+        }
+
+        function hideProcessing() {
+            processingOverlay.classList.add('hidden');
+        }
 
         // --- Theme Toggle ---
         function applyTheme(theme) {
+            // (Same as previous version)
             if (theme === 'dark') {
                 htmlElement.classList.add('dark');
                 moonIcon?.classList.add('hidden');
@@ -502,147 +448,277 @@
 
         // --- Language Toggle ---
         function applyLanguage(lang) {
+             // (Same as previous version, ensures all text updates)
             bodyElement.classList.remove('lang-en', 'lang-hi');
             bodyElement.classList.add(`lang-${lang}`);
             localStorage.setItem('language', lang);
-            currentLang = lang; // Update global state
+            currentLang = lang;
 
-            // Update title tag
             const titleText = titleElement?.getAttribute(`data-${lang}`);
-            if (titleText) {
-                titleElement.textContent = titleText;
-            }
+            if (titleText) titleElement.textContent = titleText;
 
-            // Update all elements with language-specific text
-            document.querySelectorAll('[data-en][data-hi]').forEach(el => {
-                const text = el.getAttribute(`data-${lang}`);
-                if (text) el.textContent = text;
-            });
+            document.querySelectorAll('.en-text').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.hi-text').forEach(el => el.style.display = lang === 'hi' ? '' : 'none');
 
-             // Update all elements with language-specific attributes (like tooltips)
             document.querySelectorAll('[data-en-tooltip][data-hi-tooltip]').forEach(el => {
                 el.setAttribute('data-tooltip', el.getAttribute(`data-${lang}-tooltip`));
             });
-             document.querySelectorAll('[data-en-title][data-hi-title]').forEach(el => {
+            document.querySelectorAll('[data-en-title][data-hi-title]').forEach(el => {
                 el.setAttribute('title', el.getAttribute(`data-${lang}-title`));
             });
-
-             // Update specific button texts if needed (already handled by lang-en/lang-hi classes but good for robustness)
-             const langToggleButton = langToggle?.querySelector(`.${lang === 'en' ? 'hi' : 'en'}-text`);
-             if(langToggleButton) langToggleButton.parentElement.classList.remove('hidden');
-             const otherLangToggleButton = langToggle?.querySelector(`.${lang}-text`);
-              if(otherLangToggleButton) otherLangToggleButton.parentElement.classList.add('hidden');
-
-
+             // Update file input accept attribute based on language if needed (though usually not necessary)
+            // updateFileInputAccept(); // Call if needed
         }
 
         langToggle?.addEventListener('click', () => {
             const newLang = currentLang === 'en' ? 'hi' : 'en';
             applyLanguage(newLang);
             updateLoginUI(); // Re-apply login UI updates as text changes
+            displaySelectedFiles(); // Update displayed file list language
         });
 
         // --- Login Simulation ---
         function updateLoginUI() {
-            if (isLoggedIn) {
+            // (Same as previous version)
+             if (isLoggedIn) {
                 bodyElement.classList.remove('logged-out');
                 bodyElement.classList.add('logged-in');
                 personalizationSection?.classList.remove('personalization-disabled');
                 recentFilesFeature?.classList.remove('opacity-50');
                 cloudSaveFeature?.classList.remove('opacity-50');
-                loginPrompt?.classList.add('hidden'); // Hide login prompt
+                loginPrompt?.classList.add('hidden');
             } else {
                 bodyElement.classList.remove('logged-in');
                 bodyElement.classList.add('logged-out');
-                personalizationSection?.classList.add('personalization-disabled'); // Optional: disable section visually
-                recentFilesFeature?.classList.add('opacity-50'); // Dim features requiring login
+                personalizationSection?.classList.add('personalization-disabled');
+                recentFilesFeature?.classList.add('opacity-50');
                 cloudSaveFeature?.classList.add('opacity-50');
-                loginPrompt?.classList.remove('hidden'); // Show login prompt
+                loginPrompt?.classList.remove('hidden');
             }
-             // Update tooltips for dynamic elements like dashboard/logout
-            applyLanguage(currentLang); // Ensure tooltips are correct after login state change
+            applyLanguage(currentLang); // Ensure tooltips/text are correct
         }
 
-        function simulateLogin() {
+        function showLoginModal() {
             // **BACKEND INTEGRATION POINT**
-            // In a real app, you would make an API call here to authenticate the user.
-            // On success:
+            // In a real app, you would show a modal with a login form here.
+            // The form would submit credentials to a /api/login endpoint.
+            showMessage(currentLang === 'hi' ? 'लॉगिन फॉर्म यहाँ खुलेगा।' : 'Login form would open here.');
+            // simulateLogin(); // Optionally simulate login for testing UI
+        }
+
+        function showRegisterModal() {
+             // **BACKEND INTEGRATION POINT**
+            // In a real app, you would show a modal with a registration form here.
+            // The form would submit data to a /api/register endpoint.
+            showMessage(currentLang === 'hi' ? 'पंजीकरण फ़ॉर्म यहाँ खुलेगा।' : 'Registration form would open here.');
+        }
+
+        function simulateLogin() { // Kept for potential testing
             console.log("Simulating Login...");
             isLoggedIn = true;
             localStorage.setItem('isLoggedIn', 'true');
             updateLoginUI();
-            alert(currentLang === 'hi' ? 'लॉगिन सफल!' : 'Login Successful!'); // Replace with better UI feedback
-        }
-
-        function simulateRegister() {
-             // **BACKEND INTEGRATION POINT**
-            // In a real app, you would show a registration form and make an API call here.
-            // On success, you might automatically log them in:
-            console.log("Simulating Registration...");
-            alert(currentLang === 'hi' ? 'पंजीकरण फ़ॉर्म यहाँ दिखाया जाएगा।' : 'Registration form would be shown here.');
-            // For simulation, let's just log them in after 'registering'
-            // isLoggedIn = true;
-            // localStorage.setItem('isLoggedIn', 'true');
-            // updateLoginUI();
+            showMessage(currentLang === 'hi' ? 'लॉगिन सफल!' : 'Login Successful!', 'success');
         }
 
         function simulateLogout() {
              // **BACKEND INTEGRATION POINT**
-            // In a real app, you would make an API call here to invalidate the user's session/token.
+            // In a real app, make an API call to /api/logout.
             console.log("Simulating Logout...");
             isLoggedIn = false;
             localStorage.removeItem('isLoggedIn');
             updateLoginUI();
-             alert(currentLang === 'hi' ? 'आप लॉग आउट हो गए हैं।' : 'You have been logged out.'); // Replace with better UI feedback
+            showMessage(currentLang === 'hi' ? 'आप लॉग आउट हो गए हैं।' : 'You have been logged out.');
         }
 
         // Event Listeners for Login/Register/Logout
-        loginBtn?.addEventListener('click', simulateLogin);
-        registerBtn?.addEventListener('click', simulateRegister);
+        loginBtn?.addEventListener('click', showLoginModal);
+        registerBtn?.addEventListener('click', showRegisterModal);
         logoutBtn?.addEventListener('click', simulateLogout);
 
-        // --- Drag and Drop ---
+        // --- File Handling ---
+        function handleFileSelection(files) {
+            selectedFiles = Array.from(files); // Update global list
+            displaySelectedFiles();
+            updateToolAvailability(); // Enable/disable tools based on file types
+        }
+
+        function displaySelectedFiles() {
+            fileListDiv.innerHTML = ''; // Clear previous list
+            if (selectedFiles.length > 0) {
+                const list = document.createElement('ul');
+                list.className = 'list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1';
+                selectedFiles.forEach(file => {
+                    const li = document.createElement('li');
+                    li.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+                    list.appendChild(li);
+                });
+                fileListDiv.appendChild(list);
+                fileActionsDiv.classList.remove('hidden'); // Show clear button
+            } else {
+                fileActionsDiv.classList.add('hidden'); // Hide clear button
+            }
+        }
+
+        function clearSelectedFiles() {
+            selectedFiles = [];
+            fileInput.value = ''; // Reset file input
+            displaySelectedFiles();
+            updateToolAvailability(); // Reset tool availability
+        }
+
+        // Update file input 'accept' based on the clicked tool (optional, can restrict selection)
+        // function updateFileInputAccept(acceptValue = ".pdf,.jpg,.jpeg,.png,.bmp") {
+        //    fileInput.accept = acceptValue;
+        // }
+
+        // Enable/disable tools based on selected file types
+        function updateToolAvailability() {
+            toolCards.forEach(card => {
+                if (card.classList.contains('disabled')) return; // Skip manually disabled cards
+
+                const requiredAccept = card.dataset.accept; // e.g., ".pdf" or ".jpg,.jpeg"
+                if (!requiredAccept || selectedFiles.length === 0) {
+                    // If no files selected or tool accepts anything, enable (or keep state)
+                    // For simplicity, let's assume tools require files
+                    card.classList.add('opacity-50', 'pointer-events-none');
+                    return;
+                }
+
+                const acceptTypes = requiredAccept.split(',').map(t => t.trim().toLowerCase());
+                const allFilesMatch = selectedFiles.every(file => {
+                    const fileExt = `.${file.name.split('.').pop().toLowerCase()}`;
+                    const fileMime = file.type.toLowerCase();
+                    // Check extension OR MIME type
+                    return acceptTypes.includes(fileExt) || acceptTypes.some(type => type.includes('/') && fileMime.startsWith(type.split('/')[0] + '/'));
+                });
+
+                if (allFilesMatch) {
+                    card.classList.remove('opacity-50', 'pointer-events-none');
+                } else {
+                    card.classList.add('opacity-50', 'pointer-events-none');
+                }
+            });
+        }
+
+
+        // Event Listeners for File Input and Drag/Drop
+        fileInput?.addEventListener('change', (event) => handleFileSelection(event.target.files));
+        clearFilesBtn?.addEventListener('click', clearSelectedFiles);
+
         dragDropArea?.addEventListener('dragover', (event) => {
             event.preventDefault();
             dragDropArea.classList.add('dragging');
         });
-
         dragDropArea?.addEventListener('dragleave', () => {
             dragDropArea.classList.remove('dragging');
         });
-
         dragDropArea?.addEventListener('drop', (event) => {
             event.preventDefault();
             dragDropArea.classList.remove('dragging');
-            const files = event.dataTransfer.files;
-            if (files.length > 0 && fileInput) {
-                fileInput.files = files;
-                console.log('Files dropped:', files);
-                 // **UI FEEDBACK POINT**
-                alert(`${files.length} file(s) selected via drop.`); // Replace with better UI feedback (e.g., display file names)
-                 // **PROCESSING POINT**: Trigger file processing logic here
-            }
+            handleFileSelection(event.dataTransfer.files);
         });
 
-        fileInput?.addEventListener('change', () => {
-             const files = fileInput.files;
-             if (files && files.length > 0) {
-                 console.log('Files selected:', files);
-                  // **UI FEEDBACK POINT**
-                 alert(`${files.length} file(s) selected via button.`); // Replace with better UI feedback
-                  // **PROCESSING POINT**: Trigger file processing logic here
-             }
+        // --- Tool Click Handling ---
+        toolCards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (card.classList.contains('disabled') || card.classList.contains('pointer-events-none')) {
+                     showMessage(currentLang === 'hi' ? 'यह टूल अभी उपलब्ध नहीं है या चयनित फ़ाइलों के लिए उपयुक्त नहीं है।' : 'This tool is currently unavailable or not suitable for the selected files.', 'info');
+                    return;
+                }
+                if (selectedFiles.length === 0) {
+                    showMessage(currentLang === 'hi' ? 'कृपया पहले फ़ाइलें चुनें।' : 'Please select files first.', 'info');
+                    // Optionally trigger file input click: fileInput.click();
+                    return;
+                }
+
+                const toolName = card.dataset.tool;
+                handleToolProcessing(toolName, selectedFiles);
+            });
         });
+
+        async function handleToolProcessing(toolName, files) {
+            // **BACKEND INTEGRATION POINT**
+            // This function sends data to the backend API endpoint for the specific tool.
+
+            const formData = new FormData();
+            files.forEach((file, index) => {
+                // Use a consistent field name, backend can handle multiple files
+                formData.append('files', file, file.name);
+            });
+
+            // Add any additional options if needed (e.g., for compression level, split range)
+            // formData.append('option1', 'value1');
+
+            const apiUrl = `/api/${toolName}`; // Construct API endpoint URL
+            const processingMessages = {
+                'merge-pdf': { en: 'Merging PDFs...', hi: 'PDFs को जोड़ा जा रहा है...' },
+                'jpg-to-pdf': { en: 'Converting images to PDF...', hi: 'छवियों को PDF में बदला जा रहा है...' },
+                'pdf-to-jpg': { en: 'Converting PDF to images...', hi: 'PDF को छवियों में बदला जा रहा है...' },
+                // Add messages for other tools
+            };
+
+            showProcessing(processingMessages[toolName]);
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    body: formData,
+                    // Headers might be needed for authentication (sending JWT token) if implementing real login
+                    // headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+                });
+
+                hideProcessing();
+
+                if (!response.ok) {
+                    // Try to get error message from backend response body
+                    let errorMsg = `Error: ${response.status} ${response.statusText}`;
+                    try {
+                        const errorData = await response.json(); // Assuming backend sends JSON error
+                        errorMsg = errorData.message || errorMsg;
+                    } catch (e) { /* Ignore if response is not JSON */ }
+                    throw new Error(errorMsg);
+                }
+
+                // --- Handle successful response (usually a file download) ---
+                const contentDisposition = response.headers.get('content-disposition');
+                let filename = `${toolName}-output`; // Default filename
+                if (contentDisposition) {
+                    const filenameMatch = contentDisposition.match(/filename="?(.+)"?/i);
+                    if (filenameMatch && filenameMatch.length > 1) {
+                        filename = filenameMatch[1];
+                    }
+                }
+
+                const blob = await response.blob();
+                const downloadUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(downloadUrl); // Clean up
+
+                showMessage(currentLang === 'hi' ? 'फ़ाइल सफलतापूर्वक संसाधित हुई और डाउनलोड शुरू हो गया है।' : 'File processed successfully and download started.', 'success');
+                clearSelectedFiles(); // Clear selection after successful processing
+
+            } catch (error) {
+                hideProcessing();
+                console.error(`Error processing tool ${toolName}:`, error);
+                showMessage(currentLang === 'hi' ? `त्रुटि: ${error.message}` : `Error: ${error.message}`, 'error');
+            }
+        }
+
 
         // --- Footer Year ---
         const currentYearElement = document.getElementById('current-year');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
+        if (currentYearElement) currentYearElement.textContent = new Date().getFullYear();
 
         // --- Initial Setup ---
         applyLanguage(currentLang); // Apply initial language
         updateLoginUI(); // Apply initial login state UI
+        updateToolAvailability(); // Set initial tool states (disabled if no files)
 
     </script>
 
